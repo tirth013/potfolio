@@ -61,7 +61,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="mailto:contact@example.com" 
+                href="tirthasodariya13.work@gmail.com" 
                 className="text-sage-400 hover:text-sage-300 transition-colors"
                 aria-label="Email"
               >
@@ -73,7 +73,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-sage-300/20 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-sage-400/80">
-            &copy; {currentYear} John Doe. All rights reserved.
+            &copy; {currentYear} Tirth Asodariya. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <a 
@@ -82,8 +82,6 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-sm text-sage-400/80 hover:text-sage-300 transition-colors flex items-center gap-1"
             >
-              <span>View Resume</span>
-              <ExternalLink size={14} />
             </a>
           </div>
         </div>
