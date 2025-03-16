@@ -142,28 +142,28 @@ const Contact = () => {
             <div className="flex items-center space-x-4">
               <Mail size={24} />
               <a href="mailto:your-email@example.com" className="text-gray-600">
-                your-email@example.com
+                tirthasodariya13.work@example.com
               </a>
             </div>
 
             <div className="flex items-center space-x-4">
               <Phone size={24} />
               <a href="tel:+123456789" className="text-gray-600">
-                +1 234 567 89
+                +91 84859 12886
               </a>
             </div>
 
             <div className="flex items-center space-x-4">
               <MapPin size={24} />
-              <p className="text-gray-600">Your City, Country</p>
+              <p className="text-gray-600">Surat, Gujarat</p>
             </div>
 
             {/* Social Media Links */}
             <div className="flex space-x-4">
-              <a href="https://github.com" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
+              <a href="https://github.com/tirth013" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
+              <a href="https://www.linkedin.com/in/tirth-asodariya111/" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
                 <Linkedin size={20} />
               </a>
             </div>
