@@ -166,7 +166,7 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/tirth-asodariya111/" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
                 <Linkedin size={20} />
               </a>
-              <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
+              <a href="mailto: tirthasodariya13.work@gmail.com" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
                 <Mail size={20} />
               </a>
             </div>
