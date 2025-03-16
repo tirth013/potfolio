@@ -17,6 +17,12 @@ const Contact = () => {
     });
   };
 
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open('mailto:tirthasodariya13.work@gmail.com', '_blank');
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus("submitting");
@@ -140,8 +146,9 @@ const Contact = () => {
 
             <div className="flex items-center space-x-4">
               <a
-                href="mailto:tirthasodariya13.work@gmail.com"
+                href="#"
                 className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+                onClick={handleEmailClick}
               >
                 <Mail size={24} />
                 <span>tirthasodariya13.work@gmail.com</span>
@@ -149,32 +156,44 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Phone size={24} />
-              <a href="tel:+918485912886" className="text-gray-600">
-                +91 84859 12886
+              <a 
+                href="tel:+918485912886" 
+                className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+              >
+                <Phone size={24} />
+                <span>+91 84859 12886</span>
               </a>
             </div>
 
             <div className="flex items-center space-x-4">
-              <MapPin size={24} />
-              <p className="text-gray-600">Surat, Gujarat</p>
+              <div className="flex items-center space-x-2 text-gray-600">
+                <MapPin size={24} />
+                <span>Surat, Gujarat</span>
+              </div>
             </div>
 
             {/* Social Media Links */}
             <div className="flex space-x-4">
-              <a href="https://github.com/tirth013" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
+              <a 
+                href="https://github.com/tirth013" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 rounded-full bg-gray-200 hover:bg-gray-300"
+              >
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/tirth-asodariya111/" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
+              <a 
+                href="https://www.linkedin.com/in/tirth-asodariya111/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 rounded-full bg-gray-200 hover:bg-gray-300"
+              >
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:tirthasodariya13.work@gmail.com"
+                href="#"
                 className="p-3 rounded-full bg-gray-200 hover:bg-gray-300"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.location.href = "mailto:tirthasodariya13.work@gmail.com";
-                }}
+                onClick={handleEmailClick}
               >
                 <Mail size={20} />
               </a>
