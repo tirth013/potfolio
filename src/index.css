@@ -1,0 +1,182 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 30% 94%;
+    --foreground: 213 44% 23%;
+
+    --card: 43 30% 94%;
+    --card-foreground: 213 44% 23%;
+
+    --popover: 43 30% 94%;
+    --popover-foreground: 213 44% 23%;
+
+    --primary: 213 44% 23%;
+    --primary-foreground: 43 30% 94%;
+
+    --secondary: 28 29% 78%;
+    --secondary-foreground: 213 44% 23%;
+
+    --muted: 28 29% 85%;
+    --muted-foreground: 213 44% 45%;
+
+    --accent: 43 40% 85%;
+    --accent-foreground: 213 44% 23%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 43 30% 94%;
+
+    --border: 28 29% 80%;
+    --input: 28 29% 80%;
+    --ring: 213 44% 23%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 213 44% 15%;
+    --foreground: 43 30% 94%;
+
+    --card: 213 44% 15%;
+    --card-foreground: 43 30% 94%;
+
+    --popover: 213 44% 15%;
+    --popover-foreground: 43 30% 94%;
+
+    --primary: 28 29% 78%;
+    --primary-foreground: 213 44% 15%;
+
+    --secondary: 213 44% 23%;
+    --secondary-foreground: 43 30% 94%;
+
+    --muted: 213 44% 20%;
+    --muted-foreground: 28 29% 85%;
+
+    --accent: 213 44% 20%;
+    --accent-foreground: 43 30% 94%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 43 30% 94%;
+
+    --border: 213 44% 23%;
+    --input: 213 44% 23%;
+    --ring: 28 29% 78%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md bg-white/80 dark:bg-black/50 border border-white/20 shadow-lg;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Animated background gradient */
+.animated-gradient {
+  background: linear-gradient(
+    45deg,
+    rgb(216, 196, 182, 0.3),
+    rgb(62, 88, 121, 0.3),
+    rgb(245, 239, 231, 0.3),
+    rgb(216, 196, 182, 0.3)
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Custom section styles */
+.section {
+  @apply py-16 px-4 md:px-8 max-w-7xl mx-auto;
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-sans font-medium tracking-tight;
+}
+
+.skill-bar {
+  @apply h-2 rounded-full bg-navy-200 overflow-hidden relative;
+}
+
+.skill-progress {
+  @apply h-full rounded-full absolute left-0 top-0 transition-all duration-1000;
+}
+
+/* Menu and navigation animations */
+.menu-item {
+  @apply relative overflow-hidden;
+}
+
+.menu-item::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-navy-300 transition-all duration-300;
+}
+
+.menu-item:hover::after {
+  @apply w-full;
+}
+
+/* Project card hover effects */
+.project-card {
+  @apply transition-all duration-500;
+}
+
+.project-card:hover {
+  @apply translate-y-[-8px] shadow-lg;
+}
+
+/* Animated background element */
+.floating-element {
+  @apply absolute opacity-30 z-0 animate-float;
+}
+
+/* Custom button styles */
+.button-primary {
+  @apply px-6 py-3 rounded-full bg-navy-300 text-navy-100 font-medium transition-all hover:bg-navy-400 hover:text-white hover:shadow-md active:scale-95;
+}
+
+.button-secondary {
+  @apply px-6 py-3 rounded-full border border-navy-300 text-navy-400 font-medium transition-all hover:bg-navy-300/10 hover:shadow-md active:scale-95;
+}
