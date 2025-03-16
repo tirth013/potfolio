@@ -141,14 +141,14 @@ const Contact = () => {
 
             <div className="flex items-center space-x-4">
               <Mail size={24} />
-              <a href="mailto:your-email@example.com" className="text-gray-600">
+              <a href="mailto:tirthasodariya13.work@gmail.com" className="text-gray-600">
                 tirthasodariya13.work@gmail.com
               </a>
             </div>
 
             <div className="flex items-center space-x-4">
               <Phone size={24} />
-              <a href="tel:+123456789" className="text-gray-600">
+              <a href="tel:+918485912886" className="text-gray-600">
                 +91 84859 12886
               </a>
             </div>
@@ -165,9 +165,6 @@ const Contact = () => {
               </a>
               <a href="https://www.linkedin.com/in/tirth-asodariya111/" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
                 <Linkedin size={20} />
-              </a>
-              <a href="mailto: tirthasodariya13.work@gmail.com" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
-                <Mail size={20} />
               </a>
             </div>
           </div>
