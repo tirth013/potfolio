@@ -101,8 +101,8 @@ const Contact = () => {
                 type="submit"
                 disabled={formStatus === "submitting" || formStatus === "success"}
                 className={`button-primary flex items-center gap-2 ${formStatus === "success"
-                    ? "bg-green-500 text-white"
-                    : "bg-blue-600 text-white hover:bg-blue-700"
+                  ? "bg-green-500 text-white"
+                  : "bg-blue-600 text-white hover:bg-blue-700"
                   }`}
               >
                 {formStatus === "submitting" ? (
@@ -139,9 +139,12 @@ const Contact = () => {
             <h3 className="text-2xl font-bold">Contact Information</h3>
 
             <div className="flex items-center space-x-4">
-              <Mail size={24} />
-              <a href="mailto:tirthasodariya13.work@gmail.com" className="text-gray-600">
-                tirthasodariya13.work@gmail.com
+              <a
+                href="mailto:tirthasodariya13.work@gmail.com"
+                className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+              >
+                <Mail size={24} />
+                <span>tirthasodariya13.work@gmail.com</span>
               </a>
             </div>
 
