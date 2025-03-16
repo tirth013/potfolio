@@ -168,7 +168,14 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/tirth-asodariya111/" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:tirthasodariya13.work@gmail.com" className="p-3 rounded-full bg-gray-200 hover:bg-gray-300">
+              <a
+                href="mailto:tirthasodariya13.work@gmail.com"
+                className="p-3 rounded-full bg-gray-200 hover:bg-gray-300"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.location.href = "mailto:tirthasodariya13.work@gmail.com";
+                }}
+              >
                 <Mail size={20} />
               </a>
             </div>
