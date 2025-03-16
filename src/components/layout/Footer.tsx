@@ -1,8 +1,13 @@
-
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open('mailto:tirthasodariya13.work@gmail.com', '_blank');
+  };
 
   return (
     <footer className="bg-sage-200 text-sage-400 py-12 px-6">
@@ -61,7 +66,8 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="tirthasodariya13.work@gmail.com" 
+                href="#" 
+                onClick={handleEmailClick}
                 className="text-sage-400 hover:text-sage-300 transition-colors"
                 aria-label="Email"
               >
@@ -82,6 +88,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-sm text-sage-400/80 hover:text-sage-300 transition-colors flex items-center gap-1"
             >
+              Resume <ExternalLink size={14} />
             </a>
           </div>
         </div>
