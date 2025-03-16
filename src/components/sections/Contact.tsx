@@ -142,7 +142,7 @@ const Contact = () => {
             <div className="flex items-center space-x-4">
               <Mail size={24} />
               <a href="mailto:your-email@example.com" className="text-gray-600">
-                tirthasodariya13.work@example.com
+                tirthasodariya13.work@gmail.com
               </a>
             </div>
 
