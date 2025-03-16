@@ -100,11 +100,10 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={formStatus === "submitting" || formStatus === "success"}
-                className={`button-primary flex items-center gap-2 ${
-                  formStatus === "success"
+                className={`button-primary flex items-center gap-2 ${formStatus === "success"
                     ? "bg-green-500 text-white"
                     : "bg-blue-600 text-white hover:bg-blue-700"
-                }`}
+                  }`}
               >
                 {formStatus === "submitting" ? (
                   <>
