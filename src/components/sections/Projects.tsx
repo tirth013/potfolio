@@ -5,8 +5,8 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    id: "smart-home-automation",
-    title: "Smart Home Automation System",
+    id: "multi-source-bot",
+    title: "Multi-Source Bot",
     description: "A comprehensive IoT solution for home automation with mobile app control and AI-powered automation routines.",
     image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1923&auto=format&fit=crop",
     technologies: ["React Native", "Node.js", "MongoDB", "MQTT", "TensorFlow"],
