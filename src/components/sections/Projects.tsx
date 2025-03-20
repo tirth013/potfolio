@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
@@ -8,7 +7,7 @@ const projects = [
     id: "multi-source-bot",
     title: "Multi-Source Bot",
     description: " AI-powered tool designed to gather, analyze, and synthesize information from multiple sources efficiently.",
-    image: "public\Multi-Source-bot.jfif",
+    image: "/Multi-Source-bot.jfif",
     technologies: ["Langchain","Langgraph","Streamlit"],
     demoUrl: "https://example.com/project1",
     githubUrl: "https://github.com/tirth013/Multi-Source-Bot",
