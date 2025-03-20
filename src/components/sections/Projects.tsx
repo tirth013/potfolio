@@ -4,7 +4,7 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    id: "multi-source-bot",
+    id: "smart-home-automation",
     title: "Multi-Source Bot",
     description: " AI-powered tool designed to gather, analyze, and synthesize information from multiple sources efficiently.",
     image: "/Multi-Source-bot.jfif",
