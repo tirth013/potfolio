@@ -11,8 +11,8 @@ const projects = [
     image: "public\Multi-Source-bot.jfif",
     technologies: ["Langchain","Langgraph","Streamlit"],
     demoUrl: "https://example.com/project1",
-    githubUrl: "https://github.com/johndoe/project1",
-    category: "IoT",
+    githubUrl: "https://github.com/tirth013/Multi-Source-Bot",
+    category: "AI",
   },
   {
     id: "data-visualization-dashboard",
