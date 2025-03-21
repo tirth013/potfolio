@@ -35,30 +35,29 @@ const projects = [
   {
     id: "resume-reveal",
     title: "Resume Reveal",
-    description: "An intelligent resume parser and analyzer that extracts key information from resumes and provides insights.",
-    fullDescription: `
-      Resume Reveal is a comprehensive web application designed to transform how recruiters and HR professionals process and analyze resumes. This tool leverages natural language processing techniques to extract key information from resumes and provide actionable insights.
-      
-      Key features include:
-      • Intelligent Parsing: Extracts information like skills, experience, education, and contact details with high accuracy
-      • Resume Analytics: Provides match scores against job descriptions and identifies skill gaps
-      • Candidate Management: Organizes applicants and tracks their progress through the hiring pipeline
-      • Resume Comparison: Side-by-side comparison of multiple candidates based on key metrics
-      • Data Visualization: Visual representations of candidate strengths and qualifications
-      
-      The application is built with a modern tech stack including React for the frontend, Node.js and Express for the backend API, and MongoDB for data storage. The NLP capabilities are implemented using custom algorithms along with industry-standard libraries for text processing and analysis.
-    `,
+    description: "An AI-powered resume parser that extracts structured data from resumes using Large Language Models.",
+  fullDescription: `
+    Resume Reveal transforms unstructured resumes into actionable insights for recruiters and HR professionals. Built with Python 3.12, this tool leverages Groq's Llama 3 model to extract and analyze key resume components with high accuracy.
+    
+    Key features include:
+    • Multi-format support: Process PDF, DOCX, and TXT files
+    • Comprehensive extraction: Automatically identify personal details, skills, work experience, education, and professional summaries
+    • Dual interfaces: User-friendly web application and powerful command-line interface for batch processing
+    • Configurable LLM integration: Use Groq's Llama 3 by default with options to configure other providers
+    
+    The application offers both a beautiful web interface for interactive use and a command-line interface for efficient batch processing, making it versatile for different recruitment workflows.
+  `,
     image: "/resume-reveal.webp",
     images: [
       "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=2080&auto=format&fit=crop",
     ],
-    technologies: ["React", "Node.js", "Express", "MongoDB", "NLP"],
+    technologies: ["Python", "Flask", "LangChain", "Llama 3", "pipenv"],
     githubUrl: "https://github.com/tirth013/ResumeReveal",
-    category: "Web Development",
-    date: "January 2024",
-    role: "Full Stack Developer",
+    category: "AI Applications",
+    date: "March 2025",
+    role: "Python Developer",
     client: "Personal Project",
   },
   {
