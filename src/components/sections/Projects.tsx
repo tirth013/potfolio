@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Github, ArrowRight } from "lucide-react";
 
 type Project = {
@@ -71,13 +71,14 @@ const projects: Project[] = [
 
 const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <Link
-      to={`/project/${project.id}`}
-      className="project-card bg-white/90 dark:bg-sage-400/10 rounded-xl overflow-hidden shadow-sm border border-sage-200/50 h-full flex flex-col"
+    <div
+      className="project-card bg-white/90 dark:bg-sage-400/10 rounded-xl overflow-hidden shadow-sm border border-sage-200/50 h-full flex flex-col cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={() => navigate(`/project/${project.id}`)}
     >
       <div className="relative overflow-hidden aspect-video">
         <img
@@ -122,19 +123,19 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
               <Github size={18} />
             </a>
           </div>
-          <Link
-            to={`/project/${project.id}`}
+          <button
             className="text-sage-300 hover:text-sage-400 flex items-center text-sm font-medium transition-all cursor-pointer"
             onClick={(e) => {
               e.stopPropagation();
+              navigate(`/project/${project.id}`);
             }}
           >
             View Details
             <ArrowRight size={16} className={`ml-1 transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
-          </Link>
+          </button>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
