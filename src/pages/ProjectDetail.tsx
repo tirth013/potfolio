@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Github, Calendar, User, Tag } from "lucide-react";
+import { ArrowLeft, Github, Calendar, User, Tag } from "lucide-react";
 import { useEffect, useState } from "react";
 import Footer from "../components/layout/Footer";
 
@@ -22,9 +22,10 @@ const projects = [
     image: "/Multi-Source-bot.jfif",
     images: [
       "/Multi-Source-bot.jfif",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
     ],
     technologies: ["Langchain", "Langgraph", "Streamlit", "Pipenv", "Python"],
-    demoUrl: "https://example.com/project1",
     githubUrl: "https://github.com/tirth013/Multi-Source-Bot",
     category: "AI",
     date: "March 2025",
@@ -32,36 +33,35 @@ const projects = [
     client: "Personal Project",
   },
   {
-    id: "data-visualization-dashboard",
-    title: "Data Visualization Dashboard",
-    description: "Real-time analytics dashboard with customizable visualizations for business intelligence applications.",
+    id: "traffic-violation-detection",
+    title: "Traffic Violation Detection",
+    description: "An automated system using machine learning to detect vehicles violating traffic signals in real-time.",
     fullDescription: `
-      The Data Visualization Dashboard is a powerful business intelligence tool that transforms complex data into intuitive, actionable insights through interactive visualizations.
+      The Traffic Violation Detection system is an innovative solution leveraging computer vision and machine learning techniques to automatically identify vehicles that violate traffic signals at road intersections.
       
-      As the lead developer on this project, I designed and implemented a responsive web application using React and D3.js that connects to multiple data sources and presents information through customizable charts, graphs, and tables. The system features real-time updates via WebSockets, allowing users to monitor key metrics as they change.
+      This project implements a complete pipeline from video capture to violation detection and reporting. I developed a custom model based on the YOLO (You Only Look Once) framework that processes video feeds from traffic cameras in real-time to detect vehicles and their positions relative to traffic signals.
       
       Key features include:
-      • Drag-and-drop dashboard customization
-      • Comprehensive library of visualization components
-      • Data filtering and transformation tools
-      • Export capabilities in multiple formats
-      • Role-based access control
+      • Real-time vehicle detection and tracking across video frames
+      • Traffic signal state recognition (red, yellow, green)
+      • Violation detection when vehicles cross stop lines during red signals
+      • License plate recognition using Tesseract OCR for vehicle identification
+      • Web-based dashboard for monitoring violations and system performance
       
-      The most challenging aspect was optimizing performance when handling large datasets. I implemented data aggregation strategies and lazy loading techniques to ensure smooth user experience even with millions of data points.
+      The main technical challenge was achieving reliable detection in various lighting and weather conditions while maintaining real-time processing speeds. I implemented several optimization techniques and fine-tuned the YOLO model specifically for this use case to achieve high accuracy with minimal false positives.
     `,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1498639735137-8328d2d0566b?q=80&w=2070&auto=format&fit=crop",
     images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1498639735137-8328d2d0566b?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1553367159-971d6eb97498?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1505408780565-f50d0e066056?q=80&w=2070&auto=format&fit=crop",
     ],
-    technologies: ["React", "D3.js", "Express", "PostgreSQL", "Socket.io"],
-    demoUrl: "https://example.com/data-viz",
-    githubUrl: "https://github.com/johndoe/data-viz",
-    category: "Web",
-    date: "October 2021",
-    role: "Full Stack Developer",
-    client: "DataMetrics Inc.",
+    technologies: ["Python", "TensorFlow", "YOLOv5", "Flask", "OpenCV"],
+    githubUrl: "https://github.com/tirth013/Automatic-Traffic-Violation-Detection",
+    category: "Machine Learning",
+    date: "September 2024",
+    role: "Final Year Student",
+    client: "Final year Project",
   },
   {
     id: "neural-image-processor",
@@ -251,15 +251,6 @@ const ProjectDetail = () => {
             </Link>
             <div className="flex space-x-4">
               <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-sage-400 hover:text-sage-300 transition-colors"
-              >
-                <ExternalLink size={18} className="mr-1" />
-                <span className="hidden sm:inline">Live Demo</span>
-              </a>
-              <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -366,13 +357,13 @@ const ProjectDetail = () => {
             
             <div className="flex space-x-4">
               <a
-                href={project.demoUrl}
+                href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button-primary flex items-center"
               >
-                View Live Demo
-                <ExternalLink size={18} className="ml-2" />
+                View Source Code
+                <Github size={18} className="ml-2" />
               </a>
             </div>
           </div>

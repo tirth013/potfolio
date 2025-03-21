@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { Github, ArrowRight } from "lucide-react";
 
-const projects = [
+type Project = {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  githubUrl: string;
+  category: string;
+};
+
+const projects: Project[] = [
   {
     id: "multi-source-bot",
     title: "Multi-Source Bot",
@@ -13,14 +23,13 @@ const projects = [
     category: "AI",
   },
   {
-    id: "data-visualization-dashboard",
-    title: "Data Visualization Dashboard",
-    description: "Real-time analytics dashboard with customizable visualizations for business intelligence applications.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    technologies: ["React", "D3.js", "Express", "PostgreSQL", "Socket.io"],
-    demoUrl: "https://example.com/project2",
-    githubUrl: "https://github.com/johndoe/project2",
-    category: "Web",
+    id: "traffic-violation-detection",
+    title: "Traffic Violation Detection",
+    description: "An automated system using machine learning to detect vehicles violating traffic signals in real-time.",
+    image: "https://images.unsplash.com/photo-1498639735137-8328d2d0566b?q=80&w=2070&auto=format&fit=crop",
+    technologies: ["Python", "TensorFlow", "YOLOv5", "Flask", "OpenCV"],
+    githubUrl: "https://github.com/tirth013/Automatic-Traffic-Violation-Detection",
+    category: "Machine Learning",
   },
   {
     id: "neural-image-processor",
@@ -28,7 +37,6 @@ const projects = [
     description: "A machine learning application that enhances and processes images using neural networks.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
     technologies: ["Python", "TensorFlow", "OpenCV", "Flask", "AWS Lambda"],
-    demoUrl: "https://example.com/project3",
     githubUrl: "https://github.com/johndoe/project3",
     category: "AI/ML",
   },
@@ -38,7 +46,6 @@ const projects = [
     description: "End-to-end encrypted messaging platform with focus on privacy and security.",
     image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop",
     technologies: ["Flutter", "Firebase", "SQLite", "Signal Protocol", "WebRTC"],
-    demoUrl: "https://example.com/project4",
     githubUrl: "https://github.com/johndoe/project4",
     category: "Mobile",
   },
@@ -48,7 +55,6 @@ const projects = [
     description: "A scalable platform for distributing computational tasks across multiple nodes efficiently.",
     image: "https://images.unsplash.com/photo-1551808525-51a94da548ce?q=80&w=1887&auto=format&fit=crop",
     technologies: ["Go", "Docker", "Kubernetes", "gRPC", "Redis"],
-    demoUrl: "https://example.com/project5",
     githubUrl: "https://github.com/johndoe/project5",
     category: "Backend",
   },
@@ -58,7 +64,6 @@ const projects = [
     description: "A transparent supply chain management system built on blockchain technology.",
     image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=2070&auto=format&fit=crop",
     technologies: ["Solidity", "Ethereum", "Web3.js", "React", "Node.js"],
-    demoUrl: "https://example.com/project6",
     githubUrl: "https://github.com/johndoe/project6",
     category: "Blockchain",
   },
@@ -106,16 +111,6 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
         </div>
         <div className="flex items-center justify-between mt-4">
           <div className="flex space-x-4">
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sage-400 hover:text-sage-300 transition-colors"
-              onClick={(e) => e.stopPropagation()}
-              aria-label="View Demo"
-            >
-              <ExternalLink size={18} />
-            </a>
             <a
               href={project.githubUrl}
               target="_blank"
