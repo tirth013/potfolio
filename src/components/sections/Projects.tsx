@@ -9,7 +9,6 @@ const projects = [
     description: " AI-powered tool designed to gather, analyze, and synthesize information from multiple sources efficiently.",
     image: "/Multi-Source-bot.jfif",
     technologies: ["Langchain","Langgraph","Streamlit"],
-    demoUrl: "https://example.com/project1",
     githubUrl: "https://github.com/tirth013/Multi-Source-Bot",
     category: "AI",
   },
