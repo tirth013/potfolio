@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github, Calendar, User, Tag } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -6,36 +5,31 @@ import Footer from "../components/layout/Footer";
 
 const projects = [
   {
-    id: "smart-home-automation",
-    title: "Smart Home Automation System",
-    description: "A comprehensive IoT solution for home automation with mobile app control and AI-powered automation routines.",
+    id: "multi-source-bot",
+    title: "Multi-Source Bot",
+    description: "AI-powered tool designed to gather, analyze, and synthesize information from multiple sources efficiently.",
     fullDescription: `
-      The Smart Home Automation System is a complete solution for modern homes, providing users with an intuitive way to control and automate their living spaces. 
+      The MultiSourceBot is an AI-powered tool designed to gather, analyze, and synthesize information from multiple sources efficiently. Built using LangChain and LangGraph, it enables advanced retrieval and reasoning for structured insights. The application is deployed using Streamlit, providing an interactive and user-friendly interface. The project is managed in a Pipenv virtual environment to ensure dependency management and reproducibility.
       
-      This project involved developing a full-stack application with a React Native mobile interface that communicates with a network of IoT devices through a Node.js backend. The system uses machine learning algorithms to learn user preferences and automatically adjust home settings for optimal comfort and energy efficiency.
+      Key Features:
+      • Multi-source Data Retrieval: Uses LangChain to fetch and process information from various sources.
+      • Graph-based Processing: Implements LangGraph for structured reasoning and flow control.
+      • Interactive Web Interface: Built with Streamlit for seamless user experience.
+      • Efficient Dependency Management: Utilizes Pipenv for managing Python packages.
       
-      Key features include:
-      • Real-time monitoring and control of connected devices
-      • AI-powered automation routines that adapt to user behavior
-      • Energy usage analytics and optimization suggestions
-      • Voice command integration with popular virtual assistants
-      • Secure authentication and encrypted communication
-      
-      The biggest technical challenge was ensuring reliable communication between heterogeneous IoT devices while maintaining low latency and high security. I implemented an MQTT message broker architecture with end-to-end encryption to address these requirements.
+      The project is open-source and designed to be easily extended with additional data sources and reasoning capabilities. It demonstrates the power of combining modern LLM technologies with structured workflows for information processing.
     `,
-    image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1923&auto=format&fit=crop",
+    image: "/Multi-Source-bot.jfif",
     images: [
-      "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1923&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+      "/Multi-Source-bot.jfif",
     ],
-    technologies: ["React Native", "Node.js", "MongoDB", "MQTT", "TensorFlow"],
-    demoUrl: "https://example.com/smart-home",
-    githubUrl: "https://github.com/johndoe/smart-home",
-    category: "IoT",
-    date: "March 2022",
-    role: "Lead Developer",
-    client: "TechCorp Solutions",
+    technologies: ["Langchain", "Langgraph", "Streamlit", "Pipenv", "Python"],
+    demoUrl: "https://example.com/project1",
+    githubUrl: "https://github.com/tirth013/Multi-Source-Bot",
+    category: "AI",
+    date: "March 2025",
+    role: "AI Developer",
+    client: "Personal Project",
   },
   {
     id: "data-visualization-dashboard",
