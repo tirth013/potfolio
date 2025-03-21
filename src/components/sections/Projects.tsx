@@ -23,6 +23,15 @@ const projects: Project[] = [
     category: "AI",
   },
   {
+    id: "resume-reveal",
+    title: "Resume Reveal",
+    description: "An intelligent resume parser and analyzer that extracts key information from resumes and provides insights.",
+    image: "/resume-parser.svg",
+    technologies: ["Python", "Flask", "LangChain", "GPT-4", "Pipenv"],
+    githubUrl: "https://github.com/tirth013/ResumeReveal",
+    category: "AI/ML",
+  },
+  {
     id: "traffic-violation-detection",
     title: "Traffic Violation Detection",
     description: "An automated system using machine learning to detect vehicles violating traffic signals in real-time.",

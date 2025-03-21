@@ -33,6 +33,35 @@ const projects = [
     client: "Personal Project",
   },
   {
+    id: "resume-reveal",
+    title: "Resume Reveal",
+    description: "An intelligent resume parser and analyzer that extracts key information from resumes and provides insights.",
+    fullDescription: `
+      Resume Reveal is a comprehensive web application designed to transform how recruiters and HR professionals process and analyze resumes. This tool leverages natural language processing techniques to extract key information from resumes and provide actionable insights.
+      
+      Key features include:
+      • Intelligent Parsing: Extracts information like skills, experience, education, and contact details with high accuracy
+      • Resume Analytics: Provides match scores against job descriptions and identifies skill gaps
+      • Candidate Management: Organizes applicants and tracks their progress through the hiring pipeline
+      • Resume Comparison: Side-by-side comparison of multiple candidates based on key metrics
+      • Data Visualization: Visual representations of candidate strengths and qualifications
+      
+      The application is built with a modern tech stack including React for the frontend, Node.js and Express for the backend API, and MongoDB for data storage. The NLP capabilities are implemented using custom algorithms along with industry-standard libraries for text processing and analysis.
+    `,
+    image: "/resume-reveal.webp",
+    images: [
+      "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=2080&auto=format&fit=crop",
+    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "NLP"],
+    githubUrl: "https://github.com/tirth013/ResumeReveal",
+    category: "Web Development",
+    date: "January 2024",
+    role: "Full Stack Developer",
+    client: "Personal Project",
+  },
+  {
     id: "traffic-violation-detection",
     title: "Traffic Violation Detection",
     description: "An automated system using machine learning to detect vehicles violating traffic signals in real-time.",
@@ -61,38 +90,6 @@ const projects = [
     date: "September 2024",
     role: "Final Year Student",
     client: "Final year Project",
-  },
-  {
-    id: "neural-image-processor",
-    title: "Neural Image Processor",
-    description: "A machine learning application that enhances and processes images using neural networks.",
-    fullDescription: `
-      The Neural Image Processor is an advanced image enhancement application powered by deep learning models to automatically improve image quality and perform complex transformations.
-      
-      This project involved developing a Python backend with TensorFlow that hosts various neural network models for tasks like super-resolution, colorization, style transfer, and object removal. I created a web interface using Flask that allows users to upload images and apply these enhancements with simple controls.
-      
-      Key features include:
-      • Automatic enhancement of low-quality images
-      • Smart object removal with content-aware fill
-      • Artistic style transfer from reference images
-      • Batch processing capabilities
-      • API access for integration with other applications
-      
-      The primary challenge was optimizing the neural network models for production use, balancing quality results with reasonable processing times. I implemented model quantization and GPU acceleration to achieve processing speeds suitable for interactive use.
-    `,
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1778&auto=format&fit=crop",
-    ],
-    technologies: ["Python", "TensorFlow", "OpenCV", "Flask", "AWS Lambda"],
-    demoUrl: "https://example.com/neural-image",
-    githubUrl: "https://github.com/johndoe/neural-image",
-    category: "AI/ML",
-    date: "January 2022",
-    role: "Machine Learning Engineer",
-    client: "PixelPerfect Technologies",
   },
   {
     id: "secure-messaging-app",
