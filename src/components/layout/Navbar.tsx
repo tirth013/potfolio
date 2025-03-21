@@ -5,7 +5,7 @@ const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
-  { name: "Education", href: "#experience" },
+  { name: "Education", href: "#education" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -48,13 +48,13 @@ const Navbar = () => {
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false);
     
-    // Smooth scroll to the section after a small delay to ensure menu is closed
+    // Smooth scroll to the section with reduced delay for mobile
     setTimeout(() => {
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
-    }, 300);
+    }, 100); // Reduced from 300ms to 100ms for faster response
   };
 
   return (
@@ -98,7 +98,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden text-sage-400 focus:outline-none z-50 relative"
+            className="md:hidden text-sage-400 focus:outline-none z-50 relative p-2 touch-manipulation"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -109,8 +109,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-white/95 dark:bg-sage-400/95 backdrop-blur-md transition-all duration-300 flex flex-col justify-center items-center ${
-          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`fixed inset-0 z-40 bg-white/95 dark:bg-sage-400/95 backdrop-blur-md transition-all duration-200 flex flex-col justify-center items-center ${
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
       >
         <nav className="flex flex-col space-y-6 items-center">
@@ -118,7 +118,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-sage-400 hover:text-sage-300 text-2xl font-medium transition-colors duration-300 px-8 py-2"
+              className="text-sage-400 hover:text-sage-300 text-2xl font-medium transition-colors duration-300 px-8 py-4 touch-manipulation w-full text-center"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick(item.href);

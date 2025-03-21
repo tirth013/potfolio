@@ -33,7 +33,7 @@ const Footer = () => {
                 <a href="#skills" className="text-sm hover:text-sage-300 transition-colors">Skills</a>
               </li>
               <li>
-                <a href="#experience" className="text-sm hover:text-sage-300 transition-colors">Education</a>
+                <a href="#education" className="text-sm hover:text-sage-300 transition-colors">Education</a>
               </li>
               <li>
                 <a href="#projects" className="text-sm hover:text-sage-300 transition-colors">Projects</a>

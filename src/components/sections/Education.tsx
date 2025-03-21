@@ -24,7 +24,7 @@ const education = [
   },
 ];
 
-interface ExperienceCardProps {
+interface EducationCardProps {
   title: string;
   subtitle: string;
   location: string;
@@ -34,7 +34,7 @@ interface ExperienceCardProps {
   index: number;
 }
 
-const ExperienceCard = ({
+const EducationCard = ({
   title,
   subtitle,
   location,
@@ -42,7 +42,7 @@ const ExperienceCard = ({
   description,
   tags,
   index,
-}: ExperienceCardProps) => {
+}: EducationCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -109,11 +109,11 @@ const ExperienceCard = ({
   );
 };
 
-const Experience = () => {
+const Education = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="experience" className="section py-24" ref={sectionRef}>
+    <section id="education" className="section py-24" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl font-bold mb-4">Education</h2>
@@ -125,7 +125,7 @@ const Experience = () => {
         <div className="animate-fade-in">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {education.map((edu, idx) => (
-              <ExperienceCard
+              <EducationCard
                 key={`edu-${idx}`}
                 title={edu.degree}
                 subtitle={edu.institution}
@@ -143,4 +143,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Education; 
