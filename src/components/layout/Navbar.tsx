@@ -48,13 +48,13 @@ const Navbar = () => {
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false);
     
-    // Smooth scroll to the section with reduced delay for mobile
+    // Smooth scroll to the section after a small delay to ensure menu is closed
     setTimeout(() => {
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100);
+    }, 300);
   };
 
   return (
@@ -98,7 +98,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden flex items-center justify-center text-sage-400 hover:text-sage-300 focus:outline-none z-50 relative p-2 touch-manipulation bg-navy-200/20 rounded-md"
+            className="md:hidden flex items-center justify-center text-sage-400 hover:text-sage-300 focus:outline-none z-50 relative p-2 bg-navy-200/20 rounded-md"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -109,7 +109,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-white dark:bg-sage-400 transition-all duration-200 flex flex-col justify-center items-center ${
+        className={`fixed inset-0 z-40 bg-white dark:bg-sage-400 transition-all duration-300 flex flex-col justify-center items-center ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
       >
@@ -118,7 +118,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-sage-400 hover:text-sage-300 text-2xl font-medium transition-colors duration-300 px-8 py-4 touch-manipulation w-full text-center active:bg-navy-200/10"
+              className="text-sage-400 hover:text-sage-300 text-2xl font-medium transition-colors duration-300 px-8 py-4 w-full text-center active:bg-navy-200/10"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick(item.href);
