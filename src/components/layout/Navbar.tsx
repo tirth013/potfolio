@@ -54,18 +54,18 @@ const Navbar = () => {
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Reduced from 300ms to 100ms for faster response
+    }, 100);
   };
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled || isMenuOpen
-          ? "bg-white/80 dark:bg-sage-400/90 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          ? "bg-white dark:bg-sage-400 shadow-md"
+          : "bg-white/80 backdrop-blur-md"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <a
             href="#home"
@@ -98,7 +98,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden text-sage-400 focus:outline-none z-50 relative p-2 touch-manipulation"
+            className="md:hidden flex items-center justify-center text-sage-400 hover:text-sage-300 focus:outline-none z-50 relative p-2 touch-manipulation bg-navy-200/20 rounded-md"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -109,16 +109,16 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-white/95 dark:bg-sage-400/95 backdrop-blur-md transition-all duration-200 flex flex-col justify-center items-center ${
+        className={`fixed inset-0 z-40 bg-white dark:bg-sage-400 transition-all duration-200 flex flex-col justify-center items-center ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col space-y-6 items-center">
+        <nav className="flex flex-col space-y-6 items-center w-full">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-sage-400 hover:text-sage-300 text-2xl font-medium transition-colors duration-300 px-8 py-4 touch-manipulation w-full text-center"
+              className="text-sage-400 hover:text-sage-300 text-2xl font-medium transition-colors duration-300 px-8 py-4 touch-manipulation w-full text-center active:bg-navy-200/10"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick(item.href);
