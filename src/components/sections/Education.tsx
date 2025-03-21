@@ -20,7 +20,7 @@ const education = [
     period: "2009 - 2013",
     description:
       "Studied computer architecture, algorithms, and embedded systems. Completed a senior project on low-power IoT sensor networks.",
-    achievements: ["Cum Laude", "Dean's List (all semesters)", "ACM Programming Team"],
+    achievements: ["GPA: 3.9/4.0", "Dean's List (all semesters)", "ACM Programming Team"],
   },
 ];
 
