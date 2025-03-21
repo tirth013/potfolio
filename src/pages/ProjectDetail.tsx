@@ -201,6 +201,8 @@ const ProjectDetail = () => {
   useEffect(() => {
     // Find the project by ID
     const foundProject = projects.find((p) => p.id === id);
+    console.log("URL ID:", id);
+    console.log("Found project:", foundProject);
     if (foundProject) {
       setProject(foundProject);
     }
@@ -271,13 +273,13 @@ const ProjectDetail = () => {
           <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-sage-200/50 overflow-hidden mb-10">
             <div className="aspect-video relative overflow-hidden">
               <img
-                src={project.images[selectedImageIndex]}
+                src={project.images && project.images.length > 0 ? project.images[selectedImageIndex] : project.image}
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
             </div>
             
-            {project.images.length > 1 && (
+            {project.images && project.images.length > 1 && (
               <div className="p-4 flex space-x-2 overflow-x-auto">
                 {project.images.map((image, index) => (
                   <button

@@ -73,12 +73,16 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
+  const handleNavigate = () => {
+    navigate(`/project/${project.id}`);
+  };
+
   return (
     <div
       className="project-card bg-white/90 dark:bg-sage-400/10 rounded-xl overflow-hidden shadow-sm border border-sage-200/50 h-full flex flex-col cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => navigate(`/project/${project.id}`)}
+      onClick={handleNavigate}
     >
       <div className="relative overflow-hidden aspect-video">
         <img
@@ -127,7 +131,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
             className="text-sage-300 hover:text-sage-400 flex items-center text-sm font-medium transition-all cursor-pointer"
             onClick={(e) => {
               e.stopPropagation();
-              navigate(`/project/${project.id}`);
+              handleNavigate();
             }}
           >
             View Details
