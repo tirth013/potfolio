@@ -128,10 +128,16 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
               <Github size={18} />
             </a>
           </div>
-          <span className="text-sage-300 flex items-center text-sm font-medium transition-all">
+          <Link
+            to={`/project/${project.id}`}
+            className="text-sage-300 hover:text-sage-400 flex items-center text-sm font-medium transition-all cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
             View Details
             <ArrowRight size={16} className={`ml-1 transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
-          </span>
+          </Link>
         </div>
       </div>
     </Link>
