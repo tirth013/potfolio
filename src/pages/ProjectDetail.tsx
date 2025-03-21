@@ -20,6 +20,11 @@ const projects = [
       The project is open-source and designed to be easily extended with additional data sources and reasoning capabilities. It demonstrates the power of combining modern LLM technologies with structured workflows for information processing.
     `,
     image: "/Multi-Source-bot.jfif",
+    images: [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1778&auto=format&fit=crop",
+    ],
     technologies: ["Langchain", "Langgraph", "Streamlit", "Pipenv", "Python"],
     githubUrl: "https://github.com/tirth013/Multi-Source-Bot",
     category: "AI",
@@ -45,6 +50,11 @@ const projects = [
       The main technical challenge was achieving reliable detection in various lighting and weather conditions while maintaining real-time processing speeds. I implemented several optimization techniques and fine-tuned the YOLO model specifically for this use case to achieve high accuracy with minimal false positives.
     `,
     image: "/traffic.webp",
+    images: [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1778&auto=format&fit=crop",
+    ],
     technologies: ["Python", "TensorFlow", "YOLOv5", "Flask", "OpenCV"],
     githubUrl: "https://github.com/tirth013/Automatic-Traffic-Violation-Detection",
     category: "Machine Learning",
