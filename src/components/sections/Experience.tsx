@@ -1,48 +1,7 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Calendar, MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-
-const experiences = [
-  {
-    title: "Senior Software Engineer",
-    company: "TechCorp Solutions",
-    location: "San Francisco, CA",
-    period: "2020 - Present",
-    description:
-      "Lead a team of engineers in developing scalable cloud solutions. Architected and implemented microservices architecture using Node.js and Docker. Reduced system latency by 40% through performance optimizations.",
-    technologies: ["React", "Node.js", "AWS", "Docker", "MongoDB"],
-  },
-  {
-    title: "Software Engineer",
-    company: "InnovateTech",
-    location: "Seattle, WA",
-    period: "2017 - 2020",
-    description:
-      "Developed and maintained full-stack applications for enterprise clients. Implemented RESTful APIs and integrated with third-party services. Collaborated with UX designers to improve user interfaces.",
-    technologies: ["JavaScript", "Python", "PostgreSQL", "Express", "Redux"],
-  },
-  {
-    title: "Junior Developer",
-    company: "WebDev Agency",
-    location: "Boston, MA",
-    period: "2015 - 2017",
-    description:
-      "Built responsive web applications using modern JavaScript frameworks. Participated in agile development practices and code reviews. Optimized frontend performance and accessibility.",
-    technologies: ["HTML/CSS", "JavaScript", "React", "Git", "SASS"],
-  },
-  {
-    title: "Software Engineering Intern",
-    company: "StartupLabs",
-    location: "Austin, TX",
-    period: "Summer 2014",
-    description:
-      "Assisted in developing new features for the company's main product. Fixed bugs and improved test coverage. Gained experience with agile methodologies and version control.",
-    technologies: ["Java", "Spring", "MySQL", "JUnit", "Maven"],
-  },
-];
 
 const education = [
   {
@@ -152,64 +111,33 @@ const ExperienceCard = ({
 
 const Experience = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [activeTab, setActiveTab] = useState("work");
 
   return (
     <section id="experience" className="section py-24" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl font-bold mb-4">Experience & Education</h2>
+          <h2 className="text-3xl font-bold mb-4">Education</h2>
           <p className="text-navy-300/80 max-w-2xl mx-auto">
-            My professional journey and academic background that shaped my expertise.
+            My academic background that shaped my expertise.
           </p>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <div className="flex justify-center mb-10">
-            <TabsList className="grid w-full max-w-md grid-cols-2 bg-navy-200/50">
-              <TabsTrigger value="work" className="data-[state=active]:bg-navy-300 data-[state=active]:text-navy-100">
-                Work Experience
-              </TabsTrigger>
-              <TabsTrigger value="education" className="data-[state=active]:bg-navy-300 data-[state=active]:text-navy-100">
-                Education
-              </TabsTrigger>
-            </TabsList>
+        <div className="animate-fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {education.map((edu, idx) => (
+              <ExperienceCard
+                key={`edu-${idx}`}
+                title={edu.degree}
+                subtitle={edu.institution}
+                location={edu.location}
+                period={edu.period}
+                description={edu.description}
+                tags={edu.achievements}
+                index={idx}
+              />
+            ))}
           </div>
-          
-          <TabsContent value="work" className="mt-0 animate-fade-in">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-              {experiences.map((exp, idx) => (
-                <ExperienceCard
-                  key={`exp-${idx}`}
-                  title={exp.title}
-                  subtitle={exp.company}
-                  location={exp.location}
-                  period={exp.period}
-                  description={exp.description}
-                  tags={exp.technologies}
-                  index={idx}
-                />
-              ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="education" className="mt-0 animate-fade-in">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {education.map((edu, idx) => (
-                <ExperienceCard
-                  key={`edu-${idx}`}
-                  title={edu.degree}
-                  subtitle={edu.institution}
-                  location={edu.location}
-                  period={edu.period}
-                  description={edu.description}
-                  tags={edu.achievements}
-                  index={idx}
-                />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+        </div>
       </div>
     </section>
   );
