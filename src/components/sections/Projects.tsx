@@ -26,7 +26,7 @@ const projects: Project[] = [
     id: "traffic-violation-detection",
     title: "Traffic Violation Detection",
     description: "An automated system using machine learning to detect vehicles violating traffic signals in real-time.",
-    image: "https://images.unsplash.com/photo-1498639735137-8328d2d0566b?q=80&w=2070&auto=format&fit=crop",
+    image: "/traffic.webp",
     technologies: ["Python", "TensorFlow", "YOLOv5", "Flask", "OpenCV"],
     githubUrl: "https://github.com/tirth013/Automatic-Traffic-Violation-Detection",
     category: "Machine Learning",

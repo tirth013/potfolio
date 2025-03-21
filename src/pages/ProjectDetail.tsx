@@ -20,11 +20,6 @@ const projects = [
       The project is open-source and designed to be easily extended with additional data sources and reasoning capabilities. It demonstrates the power of combining modern LLM technologies with structured workflows for information processing.
     `,
     image: "/Multi-Source-bot.jfif",
-    images: [
-      "/Multi-Source-bot.jfif",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-    ],
     technologies: ["Langchain", "Langgraph", "Streamlit", "Pipenv", "Python"],
     githubUrl: "https://github.com/tirth013/Multi-Source-Bot",
     category: "AI",
@@ -45,17 +40,11 @@ const projects = [
       • Real-time vehicle detection and tracking across video frames
       • Traffic signal state recognition (red, yellow, green)
       • Violation detection when vehicles cross stop lines during red signals
-      • License plate recognition using Tesseract OCR for vehicle identification
       • Web-based dashboard for monitoring violations and system performance
       
       The main technical challenge was achieving reliable detection in various lighting and weather conditions while maintaining real-time processing speeds. I implemented several optimization techniques and fine-tuned the YOLO model specifically for this use case to achieve high accuracy with minimal false positives.
     `,
-    image: "https://images.unsplash.com/photo-1498639735137-8328d2d0566b?q=80&w=2070&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1498639735137-8328d2d0566b?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1553367159-971d6eb97498?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1505408780565-f50d0e066056?q=80&w=2070&auto=format&fit=crop",
-    ],
+    image: "/traffic.webp",
     technologies: ["Python", "TensorFlow", "YOLOv5", "Flask", "OpenCV"],
     githubUrl: "https://github.com/tirth013/Automatic-Traffic-Violation-Detection",
     category: "Machine Learning",
